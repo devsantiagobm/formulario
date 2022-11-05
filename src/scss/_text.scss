@@ -1,0 +1,25 @@
+@use './colors' as *;
+@use './fonts' as *;
+
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title{
+        font-size: 3.5rem;
+        font-size: $bold;
+        line-height: 3.5rem;
+    }
+
+    &__paragraph{
+        font-size: 1.1rem;
+    }
+}
+
+@mixin text-812{
+    .text{
+        width: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+@use './base' as *;
+@use './form' as *;
+@use './text' as *;
+@use './form' as *;
+
+@media screen and (max-width: 1272px){
+    @include base-1272;
+    @include form-1272;
+}
+
+@media screen and(max-width: 812px){
+    @include base-812;
+    @include form-812;
+    @include text-812;
+}
+
+@media screen and (max-width: 512px){
+    @include base-512;
+}

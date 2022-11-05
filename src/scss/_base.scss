@@ -1,0 +1,65 @@
+@use './colors' as *;
+@use './fonts' as *;
+
+:root {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: $normal;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    color-scheme: light dark;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app{
+    width:100%;
+    min-height: 100vh;
+    background-image: url("./assets/bg.png");
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    gap: 80px;
+    background-repeat: no-repeat;
+    padding: 0 10vw;
+    animation: background-animation 40s ease infinite;
+    
+    @keyframes background-animation{
+        0%{ background-position: 0 0}
+        25%{ background-position: 50px 10px}
+        50%{ background-position: 0 0}
+        75%{ background-position: -50px -10px}
+        100%{ background-position: 0 0 }
+    }
+}
+
+
+@mixin base-1272{
+    :root{
+        font-size: 14px;
+    }
+
+    .app{
+        padding: 0 5vw;
+        gap: 40px;
+    }
+}
+
+@mixin base-812{
+    .app{
+        flex-direction: column;
+        padding: 48px 10vw;
+    }
+}
+
+@mixin base-512{
+    .app{
+        padding: 48px 5vw;
+    }
+}
